@@ -12,8 +12,9 @@ representing different kinds of information in our applications. In this lesson,
 we'll explore these different data types and see the similarities and
 differences to how Ruby and JavaScript treat these data types.
 
-Make sure to follow along with the examples in this lesson in IRB! Ruby give you
-a lot of ways to explore data, so you'll learn more by experimenting.
+Make sure to follow along with the examples in this lesson in IRB! As an
+object-oriented language, Ruby gives you a lot of tools to inspect different
+data types, so you'll learn more by getting your hands on the code.
 
 ## Strings
 
@@ -49,7 +50,7 @@ console.log(`Say hello to my dog ${dogName}`);
 ```
 
 Backticks in Ruby are used for [another purpose][executing terminal commands],
-so don't use backticks for strings in Ruby.
+so **don't use backticks for strings in Ruby**.
 
 [executing terminal commands]: https://www.bigbinary.com/blog/backtick-system-exec-in-ruby
 
@@ -99,7 +100,9 @@ and more in that list):
 > Programming.
 
 You can learn more about the many String methods by reading the
-[Ruby documentation](http://ruby-doc.org/core-2.7.3/String.html) on Strings.
+[Ruby documentation][string docs] on Strings.
+
+[string docs]: http://ruby-doc.org/core-2.7.3/String.html
 
 ## Numbers
 
@@ -110,10 +113,11 @@ In Ruby, unlike JavaScript, there are two types of numbers: Integers and Floats.
 **Floats** are decimal numbers, like `7.3`.
 
 There are a number of methods available to you for operating on or manipulating
-integers. You can read more about Integers
-[here](http://ruby-doc.org/core-2.7.3/Integer.html) and more about Floats
-[here](http://ruby-doc.org/core-2.7.3/Float.html). For now, we'll just check out
-a few examples:
+integers. You can read more about [Integers here][integer docs] and more about
+[Floats here][float docs]. For now, we'll just check out a few examples:
+
+[integer docs]: http://ruby-doc.org/core-2.7.3/Integer.html
+[float docs]: http://ruby-doc.org/core-2.7.3/Float.html
 
 ```ruby
 7.5.floor
@@ -284,18 +288,17 @@ can store any type of data in an array.
 There are a number of ways to create an array. Just like with creating strings,
 you can use the literal constructor or the class constructor.
 
-**The Literal Constructor:** `[1, 3, 400, 7]` is an array of integers. Any set of
-comma separated data enclosed in brackets is an array. So, by simply writing
-something like the above, you can create an array:
+`[1, 3, 400, 7]` is an array of integers. Any set of comma separated data
+enclosed in brackets is an array. So, by simply writing something like the
+above, you can create an array:
 
 ```rb
 [1, 3, 400, 7]
 # => [1, 3, 400, 7]
 ```
 
-**The Class Constructor:** You can also create an array with the
-[`Array.new` syntax](http://ruby-doc.org/core-2.7.3/Array.html). Just typing
-`Array.new` will create an empty array (`[]`):
+You can also create an array with the [`Array.new` syntax][array docs]. Just
+typing `Array.new` will create an empty array (`[]`):
 
 ```rb
 Array.new
@@ -306,7 +309,7 @@ There are many ways to operate on arrays and on each individual item, or
 element, within an array. Later on in the course, we'll learn about methods for
 iterating over arrays (as with the `.forEach`, `.map`, etc methods in
 JavaScript). For now, we'll preview a few array methods, and you can check out
-more [here](http://ruby-doc.org/core-2.7.3/Array.html).
+more [here][array docs].
 
 ```rb
 [1, 3, 400, 7].length
@@ -317,16 +320,16 @@ more [here](http://ruby-doc.org/core-2.7.3/Array.html).
 # => [3, 2, 1]
 ```
 
+[array docs]: http://ruby-doc.org/core-2.7.3/Array.html
+
 ## Hashes
 
 Hashes are Ruby's equivalent of a plain old JavaScript object. They are composed
 of key/value pairs. Each key points to a specific value, just like a word and a
 definition in a regular dictionary.
 
-There are a few ways of writing hashes.
-
-**The Literal Constructor:** You can create a hash by simply writing key/value
-pairs enclosed in curly braces:
+There are a few ways of writing hashes. You can create a hash by simply writing
+key/value pairs enclosed in curly braces:
 
 ```rb
 { key1: "value1", key2: "value2" }
@@ -342,6 +345,15 @@ my_hash[:key2]
 # => "value2"
 ```
 
+Unlike JavaScript, you cannot use the dot notation to access keys on hashes
+&mdash; only the bracket notation will work:
+
+```rb
+my_hash = { key1: "value1", key2: "value2" }
+my_hash.key2
+# NoMethodError (undefined method `key2' for {:key1=>"value1", :key2=>"value2"}:Hash)
+```
+
 You can also create hashes with Strings for keys:
 
 ```rb
@@ -352,9 +364,8 @@ This syntax is known as the **hash rocket** syntax, and is useful if you need
 String keys for Symbols; however, in general, using Symbols for keys is
 preferred.
 
-**The Class Constructor:** Last but not least, you can also use the
-[`Hash.new` syntax](http://ruby-doc.org/core-2.7.3/Hash.html), which would
-create an empty hash, `{}`:
+Last but not least, you can also use the [`Hash.new` syntax][hash docs], which
+would create an empty hash, `{}`:
 
 ```rb
 Hash.new
@@ -363,7 +374,9 @@ Hash.new
 
 There are many methods for operating on hashes and their individual key/value
 pairs. We will learn much more about them later, but you can preview some
-methods [here](http://ruby-doc.org/core-2.7.3/Hash.html).
+methods [here][hash docs].
+
+[hash docs]: http://ruby-doc.org/core-2.7.3/Hash.html
 
 ## Conclusion
 
@@ -372,10 +385,10 @@ language is its common data types. You'll find similarities across almost all
 programming languages when it comes to data types, with some differences of
 opinion cropping up as well, like what data is considered "truthy" and "falsy".
 
-As you're exploring data types in Ruby, make sure
-to keep the "everything is an object" principle in mind, and take advantage of
-methods that let you ask questions about your Ruby data like the `methods` and
-`class` methods. Keep the [Ruby documentation][ruby docs] handy too!
+As you're exploring data types in Ruby, make sure to keep the "everything is an
+object" principle in mind, and take advantage of methods that let you ask
+questions about your Ruby data like the `methods` and `class` methods. Keep the
+[Ruby documentation][ruby docs] handy too!
 
 ## Resources
 
