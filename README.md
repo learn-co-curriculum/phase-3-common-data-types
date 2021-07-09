@@ -108,6 +108,38 @@ You can learn more about the many String methods by reading the
 
 [string docs]: http://ruby-doc.org/core-2.7.3/String.html
 
+## A Note on Notation
+
+In Ruby, there are two different kinds of methods: **instance methods** and
+**class methods**. You won't encounter class methods until the section on
+object-oriented programming, but technically all the methods we're writing now
+are instance methods. An instance method means a method that's called on an
+_instance_ (one unique object) of a class.
+
+In Ruby, we use the `#` at the beginning of a method when referring to it in
+documentation to indicate that it's an instance method, and the `.` at the
+beginning to indicate class methods:
+
+- `#`: instance method
+- `.`: instance method
+
+For example, these two variables refer to _instances_ of the `String` class:
+
+```rb
+str1 = "hello"
+str2 = "there"
+```
+
+We can call the _instance method_ `#upcase` on both of these strings because
+they are both members of the String class, and share all the methods defined on
+that class.
+
+You'll see this syntax used often in our lessons and in the Ruby documentation,
+so just know:
+
+- When a method starts with a `#` in documentation, it's an instance method
+- When a method starts with a `.` in documentation, it's a class method
+
 ## Numbers
 
 In Ruby, unlike JavaScript, there are two types of numbers: Integers and Floats.
@@ -132,8 +164,8 @@ integers. You can read more about [Integers here][integer docs] and more about
 # => 11
 ```
 
-You can convert other some data types to integers or floats with the `to_i` and
-`to_f` methods:
+You can convert other some data types to integers or floats with the `#to_i` and
+`#to_f` methods:
 
 ```rb
 "1".to_i
@@ -159,7 +191,7 @@ operations, unless one side of the operation is already a Float:
 ## Nil
 
 In Ruby, there is one special value that represents the **absence** of a value,
-`nil`. You've already seen `nil` as the return value of the `puts` method:
+`nil`. You've already seen `nil` as the return value of the `#puts` method:
 
 ```rb
 puts "I return nil"
@@ -273,7 +305,7 @@ time they are used:
 # => 220
 ```
 
-The `object_id` method returns an internal identifier used by Ruby representing
+The `#object_id` method returns an internal identifier used by Ruby representing
 the object's identity; we can see from the code above that the same symbol
 always returns the same `object_id` while the same string does not. That means
 they’re referencing different objects in memory, since Ruby allocates new memory
@@ -391,8 +423,8 @@ opinion cropping up as well, like what data is considered "truthy" and "falsy".
 
 As you're exploring data types in Ruby, make sure to keep the "everything is an
 object" principle in mind, and take advantage of methods that let you ask
-questions about your Ruby data like the `methods` and `class` methods. Keep the
-[Ruby documentation][ruby docs] handy too!
+questions about your Ruby data like the `#methods` and `#class` methods. Keep
+the [Ruby documentation][ruby docs] handy too!
 
 ## Resources
 
