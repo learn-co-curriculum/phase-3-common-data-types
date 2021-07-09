@@ -68,6 +68,10 @@ following:
 # => "Hello"
 "hello".reverse
 # => "olleh"
+"hello" + "world"
+# => "helloworld"
+"hello" * 3
+# => "hellohellohello"
 ```
 
 You'll often hear it said that **"in Ruby, everything is an object"**. All of
