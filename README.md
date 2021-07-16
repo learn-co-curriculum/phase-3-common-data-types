@@ -121,7 +121,7 @@ documentation to indicate that it's an instance method, and the `.` at the
 beginning to indicate class methods:
 
 - `#`: instance method
-- `.`: instance method
+- `.`: class method
 
 For example, these two variables refer to _instances_ of the `String` class:
 
