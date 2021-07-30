@@ -382,7 +382,7 @@ my_hash[:key2]
 ```
 
 Unlike JavaScript, you cannot use the dot notation to access keys on hashes
-&mdash; only the bracket notation will work:
+— only the bracket notation will work:
 
 ```rb
 my_hash = { key1: "value1", key2: "value2" }
