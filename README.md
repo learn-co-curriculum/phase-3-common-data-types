@@ -373,7 +373,7 @@ key/value pairs enclosed in curly braces:
 
 Using the JSON-style syntax above will create a hash with **Symbols** for keys.
 To access data from this hash, you can use the bracket notation and pass in the
-symbol for they key you are trying to access:
+symbol for the key you are trying to access:
 
 ```rb
 my_hash = { key1: "value1", key2: "value2" }
