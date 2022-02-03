@@ -164,7 +164,7 @@ integers. You can read more about [Integers here][integer docs] and more about
 # => 11
 ```
 
-You can convert other some data types to integers or floats with the `#to_i` and
+You can convert some other data types to integers or floats with the `#to_i` and
 `#to_f` methods:
 
 ```rb
