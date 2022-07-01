@@ -27,13 +27,13 @@ double quotes:
 ```
 
 You can also create a new string by using the `String` class constructor method
-(though it's not common you'd need to):
+(though it's not something you'd need to do commonly):
 
 ```rb
 String.new("I'm a string")
 ```
 
-If you want use string interpolation in Ruby, use double quotes like so:
+If you want to use string interpolation in Ruby, use double quotes like so:
 
 ```rb
 # Ruby
@@ -343,7 +343,7 @@ Array.new
 
 There are many ways to operate on arrays and on each individual item, or
 element, within an array. Later on in the course, we'll learn about methods for
-iterating over arrays (as with the `.forEach`, `.map`, etc methods in
+iterating over arrays (as with the `.forEach`, `.map`, etc. methods in
 JavaScript). For now, we'll preview a few array methods, and you can check out
 more [here][array docs].
 
